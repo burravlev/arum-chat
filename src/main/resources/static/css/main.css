@@ -1,0 +1,22 @@
+:root {
+    --background-color: rgb(26, 26, 26);
+    --dark-background-color: rgb(15, 15, 15);
+    --light-background-color: rgb(44, 44, 44);
+    --main-color-theme: rgb(121, 119, 255);
+    --lighter-color-theme: rgb(151, 149, 255);
+    --second-color-theme: rgb(123, 121, 255);
+    --stuff: rgb(53, 53, 53);
+    --text: rgb(85, 85, 85);
+    --text-light: rgb(122, 122, 122);
+}
+
+input {
+    all: unset;
+} 
+
+* {
+    font-family: sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+}

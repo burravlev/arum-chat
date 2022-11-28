@@ -1,0 +1,85 @@
+body {
+    background-color: var(--dark-background-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--light-background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+
+header > div {
+    margin: 0 5px;
+}
+
+.second-user-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 40px;
+}
+
+.back {
+    color: var(--main-color-theme);
+    padding-left: 10px;
+}
+
+.online {
+    color: var(--text-light);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--light-background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-input {
+    width: calc(80% - 10px);
+    padding: 7px;
+    background-color: black;
+    margin: 7px 0;
+    border-radius: 20px;
+}
+
+.clip {
+    padding-left: 10px;
+}
+
+.micro {
+    position: relative;
+    top: 2px;
+    color: var(--text-light);
+    padding-right: 10px;
+}
+
+.messages {
+    height: 100vh;
+    background-image: url("https://wallpaperaccess.com/full/3204572.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.space {
+    height: 60px;
+}
