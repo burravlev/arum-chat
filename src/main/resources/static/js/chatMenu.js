@@ -1,5 +1,6 @@
 const chats = document.getElementById('chats');
 
+//add chat to chat menu
 function chatPreview(chat) {
     let item = document.createElement('li');
     item.classList.add('chat');
@@ -18,11 +19,11 @@ function chatPreview(chat) {
 
     let user = document.createElement('div');
     user.classList.add('user');
-    user.appendChild(document.createTextNode(chat.secondUser));
+    user.appendChild(document.createTextNode(chat.companion));
 
     let lastMag = document.createElement('div');
     lastMag.classList.add('last-msg');
-    lastMag.appendChild(document.createTextNode(chat.lastMessage));
+    lastMag.appendChild(document.createTextNode('last message'));
 
     chatInfo.appendChild(user);
     chatInfo.appendChild(lastMag);
@@ -32,11 +33,13 @@ function chatPreview(chat) {
     chats.appendChild(item);
 }
 
-let chatExample = {
-    secondUser: 'User',
-    lastMessage: 'Hello'
-}
-
-const newChatBtn = document.getElementById('new');
-
-newChatBtn.addEventListener('click', chatPreview);
+fetch('/api/v1/users/alina')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        console.log(data.chats);
+        for (let chat  of data.chats) {
+            chatPreview(chat);
+            console.log(chat);
+        }
+    });

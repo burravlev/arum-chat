@@ -23,4 +23,9 @@ public class UserServiceImpl implements UserService {
         List<User> users = userRepository.findAll().stream().map(user -> new User(user)).collect(Collectors.toList());
         return users;
     }
+
+    @Override
+    public User getByUsername(String username) {
+        return new User(userRepository.findByUsername(username));
+    }
 }

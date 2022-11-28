@@ -9,4 +9,9 @@ public class HomeController {
     public String home() {
         return "index";
     }
+
+    @GetMapping("chats")
+    public String chats() {
+        return "chat/chat-menu";
+    }
 }

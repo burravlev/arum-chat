@@ -26,7 +26,45 @@ public class MessageModel implements Comparable {
 
     public MessageModel() {}
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public UserModel getSender() {
+        return sender;
+    }
+
+    public void setSender(UserModel sender) {
+        this.sender = sender;
+    }
+
+    public UserModel getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(UserModel receiver) {
+        this.receiver = receiver;
+    }
+
+    public Date getSentAt() {
+        return sentAt;
+    }
+
+    public void setSentAt(Date sentAt) {
+        this.sentAt = sentAt;
+    }
+
+    public ChatModel getChat() {
+        return chat;
+    }
+
+    public void setChat(ChatModel chat) {
+        this.chat = chat;
+    }
 
     @Override
     public int compareTo(Object o) {
